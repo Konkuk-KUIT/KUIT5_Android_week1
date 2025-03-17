@@ -10,12 +10,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Scaffold
@@ -156,100 +153,102 @@ fun ProfileCardPreview() {
 @Composable
 fun Sample() {
     Column(Modifier.padding(top = 27.dp)) {
-        Row {
-            Box(
-                modifier = Modifier
-                    .padding(
-                        start = 29.dp,
-                    )
-                    .width(60.dp)
-                    .height(60.dp)
-                    .clip(RoundedCornerShape(20.dp))
-                    .background(color = Color.Black)
+//        Box(
+//            modifier = Modifier
+//                .padding(
+//                    start = 29.dp,
+//                )
+//                .width(60.dp)
+//                .height(60.dp)
+//                .clip(RoundedCornerShape(20.dp))
+//                .background(color = Color.Black)
+//
+//        )
+//
+//
+//
+//        Box(
+//            modifier = Modifier
+//                .padding(
+//                    top = 20.dp,
+//                    start = 29.dp
+//                )
+//                .size(60.dp)
+//                .border(
+//                    width = 2.dp,
+//                    color = Color.Black,
+//                    shape = RoundedCornerShape(20.dp)
+//
+//                )
+//        )
+//        Box(
+//            modifier = Modifier
+//                .padding(
+//                    top = 20.dp,
+//                    start = 29.dp
+//                )
+//                .size(76.dp)
+//                .border(
+//                    width = 2.dp,
+//                    color = Color.Black,
+//                )
+//                .padding(all = 8.dp)
+//                .background(color = Color.Red)
+//
+//        )
+//        Image(
+//            painter = painterResource(R.drawable.image),
+//            contentDescription = "a dog image",
+//            modifier = Modifier
+//                .padding(top = 20.dp, start = 29.dp)
+//                .size(80.dp)
+//        )
 
-            )
-            Box(
-                modifier = Modifier
-                    .padding(start = 53.dp)
-                    .size(60.dp)
-                    .clip(CircleShape)
-                    .background(color = Color.Black)
-            )
-        }
 
-        Row {
-            Box(
-                modifier = Modifier
-                    .padding(
-                        top = 20.dp,
-                        start = 29.dp
-                    )
-                    .size(60.dp)
-                    .border(
-                        width = 2.dp,
-                        color = Color.Black,
-                        shape = RoundedCornerShape(20.dp)
+        Box(
+            modifier = Modifier
+                .padding(start = 29.dp)
+                .size(60.dp)
+                .clip(CircleShape)
+                .background(color = Color.Black)
+        )
+        Box(
+            modifier = Modifier
+                .padding(start = 29.dp, top = 20.dp)
+                .size(60.dp)
+                .border(color = Color.Black, width = 3.dp, shape = CircleShape)
+        )
 
-                    )
-            )
-            Box(
-                modifier = Modifier
-                    .padding(start = 53.dp, top = 20.dp)
-                    .size(60.dp)
-                    .border(color = Color.Black, width = 3.dp, shape = CircleShape)
-            )
-        }
-        Row {
-            Box(
-                modifier = Modifier
-                    .padding(
-                        top = 20.dp,
-                        start = 29.dp
-                    )
-                    .size(76.dp)
-                    .border(
-                        width = 2.dp,
-                        color = Color.Black,
-                    )
-                    .padding(all = 8.dp)
-                    .background(color = Color.Red)
 
-            )
-            Box(
-                modifier = Modifier
-                    .padding(
-                        top = 20.dp,
-                        start = 37.dp
-                    )
-                    .size(76.dp)
-                    .border(
-                        width = 2.dp,
-                        color = Color.Black,
-                    )
-                    .padding(all = 8.dp)
-                    .clip(CircleShape)
-                    .background(color = Color.Blue)
 
-            )
-        }
+        Box(
+            modifier = Modifier
+                .padding(
+                    top = 20.dp,
+                    start = 29.dp
+                )
+                .size(76.dp)
+                .border(
+                    width = 2.dp,
+                    color = Color.Black,
+                )
+                .padding(all = 8.dp)
+                .clip(CircleShape)
+                .background(color = Color.Blue)
 
-        Row {
-            Image(
-                painter = painterResource(R.drawable.image),
-                contentDescription = "a dog image",
-                modifier = Modifier
-                    .padding(top = 20.dp, start = 29.dp)
-                    .size(80.dp)
-            )
-            Image(
-                painter = painterResource(R.drawable.image),
-                contentDescription = "a dog image",
-                modifier = Modifier
-                    .padding(top = 20.dp, start = 33.dp)
-                    .size(80.dp)
-                    .clip(shape = RoundedCornerShape(50.dp))
-            )
-        }
+        )
+
+
+
+        Image(
+            painter = painterResource(R.drawable.image),
+            contentDescription = "a dog image",
+            modifier = Modifier
+                .padding(top = 20.dp, start = 29.dp)
+                .size(80.dp)
+                .clip(shape = RoundedCornerShape(50.dp))
+        )
+
 
     }
 }
