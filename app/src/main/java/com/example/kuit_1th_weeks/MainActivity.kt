@@ -106,7 +106,7 @@ fun ProfileCard(modifier: Modifier = Modifier) {
                         contentDescription = "cat image",
                         modifier = Modifier
                             .size(40.dp)
-                            .padding(bottom = 4.dp) // ✅ 이미지와 텍스트 사이 간격 추가
+                            .padding(bottom = 4.dp)
                     )
 
                     Text(text = "이름 : 강민희", fontSize = 8.sp, color = Color.Black,)
@@ -236,6 +236,24 @@ fun CircleSample(){
                 .clip(CircleShape)
         )
     }
+}@Composable
+fun ModifierOrderExample() {
+    Box(
+        modifier = Modifier
+            .size(100.dp)
+            .background(Color.Red)
+            .padding(16.dp)
+    )
+}
+
+@Composable
+fun ModifierOrderExample2() {
+    Box(
+        modifier = Modifier
+            .size(100.dp)
+            .padding(16.dp)
+            .background(Color.Red)
+    )
 }
 
 @Preview(showBackground = true)
@@ -246,5 +264,7 @@ fun SamplePreview(){
     ){
        // Sample()
         CircleSample()
+        //ModifierOrderExample()
+        //ModifierOrderExample2()
     }
 }
